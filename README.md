@@ -1,3 +1,3 @@
 # SE-Go-Team
 
-This is where will will be working 
+This is where we will be working 
