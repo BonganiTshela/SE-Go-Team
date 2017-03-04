@@ -1,1 +1,8 @@
 Can we post usefull links and tutorials in here.
+
+Here are some usefull tools my old group used.
+* <b>draw.io</b> (UML Tool) https://www.draw.io Can Save diagrams to Github.
+* <b>Latex Editor:</b>
+ **TexMaker** - http://www.xm1math.net/texmaker/  
+ **TexStudio** - http://www.texstudio.org 
+ * <b>Git Course</b> (Helps to teach you how to use Github if you don't know) - https://www.codeschool.com/courses/try-git
