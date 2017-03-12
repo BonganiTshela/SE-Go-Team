@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\graphicspath{ {Images/DataModule/}  }
+\graphicspath{ {Images/}  }
 \begin{document}
 	
 
@@ -50,6 +50,7 @@
         \includegraphics[width=\linewidth]{DataModuleActivityDiagram.png}
         \begin{figure}[h]
             \caption{Data Module Activity Diagram.}
+	    This figure describes the methods that the data module might have. The users (iOS/Android/Web) will interact with the system using CRUD (Create Read Update Delete) functionality. The users will send requests(such as adding a user etc.) to the system (upstream) and wait for responses from the system. The system will send responses to the user (downstream) and wait for requests from the user.
         \end{figure}
 
     \subsection{Sequence Diagram}
