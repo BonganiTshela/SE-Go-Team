@@ -67,44 +67,36 @@
         	\end{figure}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\section{User Management Module}
+	\section{Users Management Module}
+    The user
+    management module is responsible for maintaining information about the registered
+    users of the system, including the authority levels of each user. 
+    
+    \subsection{Design Patterns used}
+     Bridge design pattern - Bridge is used when we need to decouple an abstraction from its implementation so that the two can vary independently. The pattern has the User class (Interface) which acts as a bridge which makes the functionality of the Guest and RegUser classes(concrete classes) independent from interface implementer classes. Now the Guest and RegUser type classes can be altered structurally without affecting each other. \\ \\
+     
+     Builder Design pattern - Builder pattern builds a complex object using simple objects and using a step by step approach. It provides one of the best ways to build an object. A Builder class builds the final object step by step so is independent of other objects.
+     \\\\
+     Singleton - Makes sure that only a single Admin(User) object is instantiated for each user. The Admin class provides a way to access its only object which can be accessed directly without need to instantiate the object of the class.
+    
 	
 	\subsection{Class Diagram}
         \includegraphics[width=\linewidth]{UserModuleClassDiagram.png}
         \begin{figure}[h]
-            \caption{User Management Module Class Diagram.}
+            \caption{Users Module Class Diagram.}
         \end{figure}
     
     \subsection{Deployment Diagram}
-        \includegraphics[width=\linewidth]{UserModuleDeploymentDiagram.png}
+        \includegraphics[width=\linewidth]{DeploymentDiagram.png}
         \begin{figure}[h]
-            \caption{User Management Module Deployment Diagram.}
+            \caption{User Module Deployment Diagram.}
         \end{figure}
         
-    \subsection{Activity Diagram}
-        \includegraphics[width=\linewidth]{UserModuleActivityDiagram.png}
+    \subsection{Use case Diagram}
+        \includegraphics[width=\linewidth]{UserModuleUsecaseDiagram.png}
         \begin{figure}[h]
-            \caption{User Management Module Activity Diagram.}
+            \caption{User Module Use Case Diagram.}
         \end{figure}
-
-    \subsection{Sequence Diagram}
-        \includegraphics[width=\linewidth]{UserModuleSequenceDiagram.png}
-        \begin{figure}[h]
-            \caption{User Management Module Sequence Diagram.}
-        \end{figure}
-
-	
-	\subsection{State Diagram}
-       \includegraphics[width=\linewidth]{UserModuleStateDiagram.png}
-        \begin{figure}[h]
-        	\caption{User Management Module State Diagram.}
-        \end{figure}
-	
-	\subsection{Use Case Diagram}
-        	\includegraphics[width=\linewidth]{UserModuleUseCaseDiagram.png}
-        	\begin{figure}[h]
-        		\caption{User Management Module Use Case Diagram.}
-        	\end{figure}
         	
    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    
