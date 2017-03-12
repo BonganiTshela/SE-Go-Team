@@ -21,4 +21,15 @@ The user interface for the navigation module should provide an easy means for th
   
 The Navigation module’s communication requirements should be described by the other modules with which it interacts. The navigation module will create a GIS request that will be sent to the GIS module which will in turn use the required communication protocols to access and retrieve map data from the GIS database. A GIS request could also be for utilising the device’s GPS chip and communicating with a satellite to determine device position. Alternatively the WiFi chip could be used and based on its communication, via network protocols, with nodes in the UP network, the device position could theoretically be determined.
 
+\subsection{Data Module}
+
+\subsubsection{Hardware Interface Requirements}
+
+The Data Module requires the NavUP system to have a server and a database(s). The database(s) must be able to send and retrieve streams form users. The server must be able to communicate with the database(s) in order to allow the users to have an interaction with the database(s).
+Both the server and the database(s) need to be equipped with powerful and up to standard hardware that allows for fast processing of mass amounts of streams of data.
+
+\subsubsection{Software Interface Requirements}
+
+The data module requires the NavUP system to have the appropriate software residing on both the server and the database(s). The software must be able to control the hardware and make sure all operations happen in the fastest and most optimal way.The software must monitor all the operations in order to derive trends and improve the way that it handles requests form users as well as the way it interacts with streams of data.
+
 \end{document}
