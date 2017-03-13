@@ -35,7 +35,7 @@ marginparwidth=1.5cm, marginparsep=0.4cm, margin=2.5cm]{geometry}
     
 \title{NavUP System}
 \author{
-				Claassen Charles u15216498]\\
+				Claassen Charles u15216498\\
                 Daubinet Jordan u15260870\\
                 Kanda Madimba u17289077\\
                 Ngobale Nathan u15110045\\
@@ -54,7 +54,7 @@ marginparwidth=1.5cm, marginparsep=0.4cm, margin=2.5cm]{geometry}
 \newpage
 
 \section{Introduction}
-We have been tasked with drafting the Architectural Requirements Specifications and Design for the NavUP system. This document contains the design of the Users, Data, Navigation and Fitness modules as well as a broad overview of the entire system.
+We have been tasked with drafting the Architectural Requirements Specifications and Design for the NavUP system. This document contains the design of the Users, Data, Navigation, Events and Fitness modules as well as a broad overview of the entire system.
 
 \section{External Requirements For The System}
 \subsection{Hardware Interface Requirements}
@@ -214,20 +214,48 @@ There are multiple fitness APIs available for both Android as well as iOS device
         \begin{figure}[h]
             \caption{Fitness Module Sequence Diagram.}
         \end{figure}
-
-
-
-
-
-
-
-
-
-
         
+\newpage
+\section{Events}
+This module is responsible for the notification of events to the user automatically, this is done by constant signals being sent to the server and back to device, as well as analysis of patterns in users event searches as well as the ones they attend often, and suggesting events of a similar genre to the student thus maximising the user experience giving the device a form of artificial intelligence as it will be able to communicate to the student an event they may be inclined to attend as well.
+
+\subsection{Design Constraints}
+\begin{itemize}
+
+      \item Events can be stored on the devices calendar so without the presence of an ISP or internet source
+  of any kind the app will show very little effectivity with events that require dynamic addition during
+  the year.
+      \item Event calendar must be able to link to the users email account in order to send them updates on events
+  that may appear in order to keep them connected in a scenario where the user wants to view events happening 
+  without having to install the app on a device that isn’t theirs.
+      \item Linkage of a client’s history to future event selection, for this to be possible the program must be 
+  recorded this being their likes, types of events attended, and subscription to an event category and 
+  then receiving notifications regarding them.
+      
+\end{itemize}
+
+
+\subsection{Technology Choices}
+The technology choices when pertaining to the event capabilities of the event is that the application would have to make use of a database and commands to control the records within it, this can be done by using Standard Query Language (SQL) or Mongo DB. PHP will be used to receive and update the database using a database manipulative language such as SQL. Ajax and Jquery will be used for fast updates which do not require page reloads so signals will be sent to server requesting updates in the background. Also the capabilities to expand the database suddenly as events will be added on suddenly at random intervals.
+Also to cater for a wide range of device softwares the most dominate and software “friendly” , so to say, will be used in order to make sure it is compatible on a large variety of devices, this being Javascript, PHP, SQL, and XML for application.
+
+
+\subsection{Class Diagram}
+        \includegraphics[width=\linewidth,scale=1.5]{Images/Events_Module/class_Event.png}
+        \begin{figure}[h]
+            \caption{Events Module Class Diagram.}
+        \end{figure}
         
+\subsection{Use Case Diagram}
+        \includegraphics[width=\linewidth,scale=3]{Images/Events_Module/useCase_Event.png}
+        \begin{figure}[h]
+            \caption{Events Module Use Case Diagram.}
+        \end{figure}
         
-        
+
+
+
+     
         
 \begin{center}
 \section{System Deployment Diagram}
@@ -240,3 +268,4 @@ There are multiple fitness APIs available for both Android as well as iOS device
         
 
 \end{document}
+
